@@ -9,6 +9,8 @@
 }
 .Input {
     display: block;
+    margin: 5px;
+    padding: 2px;
 }
 @media (min-width : 600px){
     .ContactData {
