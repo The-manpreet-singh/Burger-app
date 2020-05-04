@@ -29,8 +29,8 @@ class BurgerBuilder extends Component {
    // totalPrice: 4,
    // purchasable: false,
     purchasing: false,
-    loading: false,
-    error: false,
+    // loading: false,
+    // error: false,
   };
 
   componentDidMount() {
@@ -150,9 +150,9 @@ class BurgerBuilder extends Component {
         />
       );
     }
-    if (this.state.loading) {
-      orderSummary = <Spinner />;
-    }
+    // if (this.state.loading) {
+    //   orderSummary = <Spinner />;
+    // }
     //{salad: true, meat:false, ...}
     return (
       <Aux>
@@ -177,10 +177,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onIngredientAdded: (ingName) =>
-      dispatch( burgerBuilderActions.addIngredient(ingName)),
-    onIngredientRemoved: (ingName) =>
-      dispatch( burgerBuilderActions.removeIngredient(ingName)),
+    onIngredientAdded: (ingName) =>dispatch( burgerBuilderActions.addIngredient(ingName) ),
+    onIngredientRemoved: (ingName) =>dispatch( burgerBuilderActions.removeIngredient(ingName) )
   };
 };
 
