@@ -8,6 +8,9 @@ import Input from '../../../components/UI/Input/Input';
 
 import {connect} from 'react-redux';
 
+import withErrorHandler from '../../../hoc/withErrorHandler/withErrorhandler'; 
+import * as actions from '../../../store/actions/index';
+
 class ContactData extends Component {
     state = {
         orderForm : {
@@ -103,7 +106,7 @@ class ContactData extends Component {
         event.preventDefault();
        //console.log(this.props.ingredients);
 
-          this.setState({loading:true});
+          //this.setState({loading:true});
 
           const formData= {};
           for(let formElementIdentifier in this.state.orderForm){
@@ -115,7 +118,7 @@ class ContactData extends Component {
            price: this.props.price,
            orderData:formData
        }
-     
+     this.props.onOrderBurger(order);
     }
 
     checkValidity(value, rules) {
@@ -216,6 +219,12 @@ const mapStateToProps  = state => {
         ings: state.ingredients,
         price: state.totalPrice
     }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onOrderBurger: (orderData) => dispatch(actions.purchaseBurgerStart(orderData))
+    }
 }
 
-export default connect(mapStateToProps)(ContactData);
+export default connect(mapStateToProps)(withErrorHandler(ContactData, axios));
