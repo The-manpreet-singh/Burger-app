@@ -7,6 +7,7 @@ import Checkout from './containers/Checkout/Checkout';
 import Orders from './containers/Orders/Orders';
 
 import Auth from '../src/containers/Auth/Auth';
+import Logout from '../src/containers/Auth/Logout/Logout';
 
 class App extends Component {
   /* state= {
@@ -27,6 +28,7 @@ class App extends Component {
            <Route path="/checkout" component={Checkout} />
            <Route path="/orders" component={Orders} />
            <Route path="/auth" component={Auth} />
+           <Route path="/logout" component={Logout} />
          </Switch>
          
          {/* <BurgerBuilder />
