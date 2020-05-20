@@ -1,8 +1,8 @@
 ### [Live Site](https://burger-app-by-manpreet-singh.netlify.app/)
 
-Live URL:https://burger-app-by-manpreet-singh.netlify.app/
+Live URL1:https://burger-app-by-manpreet-singh.netlify.app/
 
-         https://react-burger-app-90ca7.firebaseapp.com/
+Live URL2:https://react-burger-app-90ca7.firebaseapp.com/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
