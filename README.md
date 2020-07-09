@@ -11,5 +11,4 @@ Live URL2:https://react-burger-app-90ca7.firebaseapp.com/
 API used: https://react-burger-app-90ca7.firebaseio.com/
 
 Setup:
-
 - run `npm i && npm start`
