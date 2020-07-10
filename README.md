@@ -1,4 +1,4 @@
-# Burger Application
+# Burger Application Udemy Project
 
 I created a Burder app. I'm going to use React, Redux, react-hooks, react-routers, authentication, firebase, axios.
 
